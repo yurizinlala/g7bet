@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Prof. Felipe Dennis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Botão de Acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">G7BET</a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="areas-pesquisa.html">Áreas de Pesquisa</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="publicacoes.html">Publicações</a></li>
+                    <li><a href="orientacoes.html">Orientações</a></li>
+                    <li><a href="laboratorio.html">Laboratório LUMEN</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Área de Login -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <h1>Área Administrativa</h1>
+                <p>Acesso restrito ao professor</p>
+                
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Usuário</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+                
+                <div class="login-help">
+                    <p>Esqueceu sua senha? Entre em contato com o suporte técnico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Painel Administrativo (inicialmente oculto) -->
+    <section class="admin-panel" style="display: none;">
+        <div class="container">
+            <h1>Painel Administrativo</h1>
+            <p>Bem-vindo, Professor Felipe Dennis!</p>
+            
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Visitas</h3>
+                        <p class="stat-number">1,234</p>
+                        <p class="stat-info">Últimos 30 dias</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Mensagens</h3>
+                        <p class="stat-number">12</p>
+                        <p class="stat-info">Não lidas</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Conteúdo</h3>
+                        <p class="stat-number">48</p>
+                        <p class="stat-info">Itens publicados</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="content">Gerenciar Conteúdo</button>
+                <button class="tab-btn" data-tab="messages">Mensagens</button>
+                <button class="tab-btn" data-tab="stats">Estatísticas</button>
+                <button class="tab-btn" data-tab="settings">Configurações</button>
+            </div>
+            
+            <div class="tab-content active" id="content-tab">
+                <h2>Gerenciar Conteúdo</h2>
+                <div class="content-sections">
+                    <div class="section-card">
+                        <h3>Projetos</h3>
+                        <p>Gerenciar projetos de pesquisa, ensino e extensão.</p>
+                        <button class="btn btn-secondary">Editar</button>
+                    </div>
+                    <div class="section-card">
+                        <h3>Publicações</h3>
+                        <p>Gerenciar artigos, livros e trabalhos em eventos.</p>
+                        <button class="btn btn-secondary">Editar</button>
+                    </div>
+                    <div class="section-card">
+                        <h3>Orientações</h3>
+                        <p>Gerenciar trabalhos orientados e em andamento.</p>
+                        <button class="btn btn-secondary">Editar</button>
+                    </div>
+                    <div class="section-card">
+                        <h3>Laboratório</h3>
+                        <p>Atualizar informações sobre o Laboratório LUMEN.</p>
+                        <button class="btn btn-secondary">Editar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="messages-tab" style="display: none;">
+                <h2>Mensagens Recebidas</h2>
+                <div class="messages-list">
+                    <div class="message-item unread">
+                        <div class="message-header">
+                            <h3>João Silva</h3>
+                            <span class="message-date">Hoje, 10:45</span>
+                        </div>
+                        <p class="message-subject">Interesse em Iniciação Científica</p>
+                        <div class="message-actions">
+                            <button class="btn btn-sm">Ler</button>
+                            <button class="btn btn-sm btn-outline">Responder</button>
+                        </div>
+                    </div>
+                    <div class="message-item unread">
+                        <div class="message-header">
+                            <h3>Maria Santos</h3>
+                            <span class="message-date">Ontem, 15:20</span>
+                        </div>
+                        <p class="message-subject">Dúvida sobre projeto de extensão</p>
+                        <div class="message-actions">
+                            <button class="btn btn-sm">Ler</button>
+                            <button class="btn btn-sm btn-outline">Responder</button>
+                        </div>
+                    </div>
+                    <div class="message-item">
+                        <div class="message-header">
+                            <h3>Pedro Almeida</h3>
+                            <span class="message-date">18/05/2025</span>
+                        </div>
+                        <p class="message-subject">Agendamento de reunião</p>
+                        <div class="message-actions">
+                            <button class="btn btn-sm">Ler</button>
+                            <button class="btn btn-sm btn-outline">Responder</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="stats-tab" style="display: none;">
+                <h2>Estatísticas do Site</h2>
+                <div class="stats-container">
+                    <div class="stats-chart">
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Gráfico de Visitas</p>
+                        </div>
+                    </div>
+                    <div class="stats-details">
+                        <h3>Páginas Mais Visitadas</h3>
+                        <ul class="stats-list">
+                            <li>
+                                <span class="page-name">Home</span>
+                                <span class="page-views">452 visitas</span>
+                            </li>
+                            <li>
+                                <span class="page-name">Projetos</span>
+                                <span class="page-views">289 visitas</span>
+                            </li>
+                            <li>
+                                <span class="page-name">Laboratório LUMEN</span>
+                                <span class="page-views">187 visitas</span>
+                            </li>
+                            <li>
+                                <span class="page-name">Publicações</span>
+                                <span class="page-views">156 visitas</span>
+                            </li>
+                            <li>
+                                <span class="page-name">Contato</span>
+                                <span class="page-views">150 visitas</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="settings-tab" style="display: none;">
+                <h2>Configurações</h2>
+                <form class="settings-form">
+                    <div class="form-group">
+                        <label for="admin-email">Email de Contato</label>
+                        <input type="email" id="admin-email" value="email@uern.br">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-password">Alterar Senha</label>
+                        <input type="password" id="admin-password" placeholder="Nova senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-password-confirm">Confirmar Senha</label>
+                        <input type="password" id="admin-password-confirm" placeholder="Confirmar nova senha">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>G7BET</h3>
+                    <p>Prof. Felipe Dennis Mendonça de Oliveira</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="areas-pesquisa.html">Áreas de Pesquisa</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="publicacoes.html">Publicações</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="https://portal.uern.br/" target="_blank">UERN</a></li>
+                        <li><a href="#" target="_blank">Departamento</a></li>
+                        <li><a href="#" target="_blank">Laboratório LUMEN</a></li>
+                        <li><a href="#" target="_blank">GSET</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-envelope"></i> email@uern.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Departamento de Computação - UERN</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Lattes"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 G7BET - Todos os direitos reservados</p>
+                <p>Desenvolvido por Lucas Vítor Florêncio Borba</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Simulação de login
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');
+            const loginSection = document.querySelector('.login-section');
+            const adminPanel = document.querySelector('.admin-panel');
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const username = document.getElementById('username').value;
+                    const password = document.getElementById('password').value;
+                    
+                    // Simulação de autenticação (em um sistema real, isso seria feito no servidor)
+                    if (username === 'admin' && password === 'admin') {
+                        loginSection.style.display = 'none';
+                        adminPanel.style.display = 'block';
+                    } else {
+                        alert('Usuário ou senha incorretos. Tente novamente.');
+                    }
+                });
+            }
+            
+            // Tabs do painel administrativo
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover classe ativa de todos os botões
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Adicionar classe ativa ao botão clicado
+                    this.classList.add('active');
+                    
+                    // Obter o tab a ser exibido
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Ocultar todos os conteúdos de tab
+                    tabContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Exibir o conteúdo do tab selecionado
+                    document.getElementById(tabId + '-tab').style.display = 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

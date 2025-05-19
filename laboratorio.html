@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório LUMEN - Prof. Felipe Dennis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Botão de Acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">G7BET</a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="areas-pesquisa.html">Áreas de Pesquisa</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="publicacoes.html">Publicações</a></li>
+                    <li><a href="orientacoes.html">Orientações</a></li>
+                    <li><a href="laboratorio.html" class="active">Laboratório LUMEN</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner da Página -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Laboratório LUMEN</h1>
+            <p>Laboratório de Sistemas Embarcados e de Tempo Real</p>
+        </div>
+    </section>
+
+    <!-- Sobre o Laboratório -->
+    <section class="lab-about">
+        <div class="container">
+            <div class="lab-grid">
+                <div class="lab-image">
+                    <div class="lab-placeholder">
+                        <i class="fas fa-microchip"></i>
+                        <p>Imagem do Laboratório</p>
+                    </div>
+                </div>
+                <div class="lab-content">
+                    <h2>Sobre o LUMEN</h2>
+                    <p>O Laboratório de Sistemas Embarcados e de Tempo Real (LUMEN) é um espaço dedicado à pesquisa, desenvolvimento e ensino nas áreas de sistemas embarcados, sistemas de tempo real, automação e Internet das Coisas (IoT).</p>
+                    
+                    <p>Fundado em 2020 pelo professor Felipe Dennis Mendonça de Oliveira, o LUMEN tem como objetivo principal proporcionar infraestrutura para o desenvolvimento de projetos práticos, integrando teoria e prática na formação dos estudantes e na realização de pesquisas aplicadas.</p>
+                    
+                    <p>O laboratório está vinculado ao Departamento de Computação da Universidade do Estado do Rio Grande do Norte (UERN) e atende principalmente aos cursos de Computação e Ciência e Tecnologia.</p>
+                    
+                    <div class="lab-social">
+                        <a href="#" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-instagram"></i> Siga no Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infraestrutura -->
+    <section class="lab-infrastructure">
+        <div class="container">
+            <h2>Infraestrutura</h2>
+            <div class="infrastructure-grid">
+                <div class="infra-item">
+                    <div class="infra-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Equipamentos</h3>
+                    <ul>
+                        <li>Computadores para desenvolvimento</li>
+                        <li>Kits de desenvolvimento (Arduino, Raspberry Pi, ESP32)</li>
+                        <li>Osciloscópios e multímetros</li>
+                        <li>Impressora 3D</li>
+                        <li>Componentes eletrônicos diversos</li>
+                    </ul>
+                </div>
+                <div class="infra-item">
+                    <div class="infra-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ferramentas</h3>
+                    <ul>
+                        <li>Ambiente de desenvolvimento integrado</li>
+                        <li>Ferramentas de simulação</li>
+                        <li>Ferramentas de prototipagem</li>
+                        <li>Equipamentos para soldagem e montagem</li>
+                        <li>Software para design de PCB</li>
+                    </ul>
+                </div>
+                <div class="infra-item">
+                    <div class="infra-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Espaços</h3>
+                    <ul>
+                        <li>Área de desenvolvimento</li>
+                        <li>Área de prototipagem</li>
+                        <li>Sala de reuniões</li>
+                        <li>Espaço para aulas práticas</li>
+                        <li>Área de testes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos do Laboratório -->
+    <section class="lab-projects">
+        <div class="container">
+            <h2>Projetos em Desenvolvimento</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-image">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sistema IoT para Agricultura</h3>
+                        <p>Desenvolvimento de soluções baseadas em Internet das Coisas para monitoramento e automação de processos agrícolas, com foco em sustentabilidade e eficiência no uso de recursos.</p>
+                        <a href="projetos.html" class="card-link">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Automação Residencial</h3>
+                        <p>Criação de soluções de automação residencial de baixo custo, utilizando tecnologias embarcadas para controle de iluminação, temperatura, segurança e outros aspectos do ambiente doméstico.</p>
+                        <a href="projetos.html" class="card-link">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Laboratório Virtual</h3>
+                        <p>Desenvolvimento de um ambiente virtual para ensino de sistemas embarcados, permitindo que estudantes realizem experimentos práticos remotamente através de simuladores e acesso remoto a hardware.</p>
+                        <a href="projetos.html" class="card-link">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="lab-team">
+        <div class="container">
+            <h2>Equipe</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Prof. Felipe Dennis</h3>
+                    <p>Coordenador</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Roberto Fernandes</h3>
+                    <p>Pesquisador - Mestrado</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Ana Beatriz Costa</h3>
+                    <p>Iniciação Científica</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>João Pedro Silva</h3>
+                    <p>Graduação - TCC</p>
+                </div>
+            </div>
+            <div class="team-join">
+                <h3>Interessado em participar?</h3>
+                <p>O LUMEN está sempre aberto a novos membros interessados em sistemas embarcados e de tempo real. Entre em contato para conhecer as oportunidades disponíveis.</p>
+                <a href="contato.html" class="btn btn-primary">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>G7BET</h3>
+                    <p>Prof. Felipe Dennis Mendonça de Oliveira</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="areas-pesquisa.html">Áreas de Pesquisa</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="publicacoes.html">Publicações</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="https://portal.uern.br/" target="_blank">UERN</a></li>
+                        <li><a href="#" target="_blank">Departamento</a></li>
+                        <li><a href="#" target="_blank">Laboratório LUMEN</a></li>
+                        <li><a href="#" target="_blank">GSET</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-envelope"></i> email@uern.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Departamento de Computação - UERN</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Lattes"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 G7BET - Todos os direitos reservados</p>
+                <p>Desenvolvido por Lucas Vítor Florêncio Borba</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
